@@ -1,0 +1,22 @@
+.Quiz__bullets {
+  display: flex;
+  width: 50%;
+  flex-wrap: wrap;
+  gap: 10px;
+
+  span {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    background-color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    &.active {
+      transform: scale(1.1);
+      background-color: var(--main-color);
+      color: white;
+    }
+  }
+}
