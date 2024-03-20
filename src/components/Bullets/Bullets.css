@@ -1,8 +1,12 @@
 .Quiz__bullets {
   display: flex;
-  width: 50%;
+  width: 70%;
   flex-wrap: wrap;
   gap: 10px;
+
+  @media (max-width: 768px) {
+    gap: 5px;
+  }
 
   span {
     width: 30px;
@@ -12,6 +16,12 @@
     display: flex;
     align-items: center;
     justify-content: center;
+
+    @media (max-width: 768px) {
+      width: 20px;
+      height: 20px;
+      font-size: 12px;
+    }
 
     &.active {
       transform: scale(1.1);

@@ -40,13 +40,16 @@ const Quiz = () => {
         <div className="Quiz__answers">
           {htmlQuestions[QuestionNumber].answers.map((qus, index) => {
             return (
-              <p
+              <div
                 key={index}
                 onClick={() => AnswerClick(index)}
-                className={Answer === index ? "active" : ""}
+                className={
+                  Answer === index ? "Quiz__answer active" : "Quiz__answer"
+                }
               >
-                <span></span> {qus}
-              </p>
+                <span></span>
+                <p>{qus}</p>
+              </div>
             );
           })}
         </div>

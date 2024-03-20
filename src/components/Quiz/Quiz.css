@@ -7,16 +7,26 @@
   flex-direction: column;
   gap: 20px;
 
+  @media (max-width: 768px) {
+    gap: 10px;
+  }
+
+  .Quiz__title {
+    @media (max-width: 768px) {
+      font-size: 18px;
+    }
+  }
+
   .Quiz__answers {
     background-color: white;
     padding: 10px;
     border-radius: 5px;
 
-    p {
+    .Quiz__answer {
+      width: 100%;
       padding: 20px;
       cursor: pointer;
       border-radius: 3px;
-      font-size: 18px;
       display: flex;
       align-items: center;
       gap: 10px;
@@ -29,24 +39,45 @@
         border: 3px solid var(--main-color);
       }
 
+      p {
+        width: 90%;
+        font-size: 18px;
+      }
+
       &:hover {
-        transform: translateX(5px);
         background-color: var(--main-color-hover);
+
+        p {
+          transform: translateX(5px);
+        }
       }
 
       &.active {
-        transform: translateX(5px);
         background-color: var(--main-color);
-        color: white;
+
+        p {
+          transform: translateX(5px);
+          color: white;
+        }
 
         span {
           background-color: var(--main-color);
           border: 3px solid white;
         }
       }
-    }
-    p:not(:last-child) {
-      border-bottom: 1px solid #eee;
+
+      @media (max-width: 768px) {
+        padding: 10px;
+
+        p {
+          font-size: 14px;
+          overflow-wrap: break-word;
+        }
+      }
+
+      &:not(:last-child) {
+        border-bottom: 1px solid #eee;
+      }
     }
   }
 
