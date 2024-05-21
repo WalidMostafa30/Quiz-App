@@ -1,7 +1,8 @@
-import React, { useEffect, useState } from "react";
+/* eslint-disable react/prop-types */
+import { useEffect, useState } from "react";
 import "./Timer.css";
 
-function Timer({ setshowModal }) {
+const Timer = ({ setshowModal }) => {
   const [minutes, setMinutes] = useState(1);
   const [seconds, setSeconds] = useState(0);
 
@@ -30,6 +31,6 @@ function Timer({ setshowModal }) {
       <span className="sec">{seconds < 10 ? "0" + seconds : seconds}</span>
     </div>
   );
-}
+};
 
 export default Timer;

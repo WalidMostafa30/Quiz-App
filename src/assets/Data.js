@@ -1,4 +1,4 @@
-export const htmlQuestions = [
+export const data = [
   {
     question: "What does HTML stand for?",
     answers: [
