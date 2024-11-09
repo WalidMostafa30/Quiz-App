@@ -11,7 +11,7 @@ const Quiz = ({ setFinishQuiz, questions }) => {
   const [score, setScore] = useState(0);
   const [selectedAnswer, setSelectedAnswer] = useState(null);
   const [disabled, setDisabled] = useState(false);
-  const [seconds, setSeconds] = useState(10);
+  const [seconds, setSeconds] = useState(15);
   const dispatch = useDispatch();
   const currentQuestion = questions && questions[questionNumber];
 
@@ -24,7 +24,7 @@ const Quiz = ({ setFinishQuiz, questions }) => {
       setSelectedAnswer(null);
     }
     setDisabled(false);
-    setSeconds(10);
+    setSeconds(15);
   };
 
   const answerSelect = (index) => {

@@ -1,14 +1,15 @@
 .Quiz__timer {
-  color: var(--main-yellow);
   border: 2px solid var(--main-yellow);
-  padding: 10px 20px;
+  padding-block: 10px ;
+  text-align: center;
+  width: 100px;
   background-color: var(--main-bg);
   border-radius: 5px;
   font-size: 22px;
   font-weight: bold;
 
   @media (max-width: 768px) {
-    padding: 10px 12px;
+    padding-block: 10px ;
     font-size: 18px;
   }
 }

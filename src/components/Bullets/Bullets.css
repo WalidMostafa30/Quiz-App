@@ -5,7 +5,7 @@
   gap: 10px;
 
   @media (max-width: 768px) {
-    gap: 5px;
+    gap: 7px;
   }
 
   span {
@@ -19,9 +19,9 @@
     font-weight: bold;
 
     @media (max-width: 768px) {
-      width: 20px;
-      height: 20px;
-      font-size: 12px;
+      width: 25px;
+      height: 25px;
+      font-size: 16px;
     }
 
     &.active {

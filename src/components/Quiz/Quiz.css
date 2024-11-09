@@ -1,6 +1,6 @@
 .Quiz {
   .Quiz__title {
-    font-size: 40px;
+    font-size: 36px;
     margin-bottom: 20px;
     padding-bottom: 10px;
     border-bottom: 2px solid var(--main-yellow);
@@ -10,7 +10,7 @@
     }
 
     @media (max-width: 768px) {
-      font-size: 20px;
+      font-size: 26px;
       margin-bottom: 15px;
     }
   }
@@ -30,7 +30,7 @@
     @media (max-width: 768px) {
       padding: 7px;
       border-radius: 5px;
-      font-size: 16px;
+      font-size: 18px;
     }
 
     &:not(:last-child) {
@@ -65,22 +65,25 @@
   .Quiz__btn {
     display: flex;
     justify-content: flex-end;
+
     span {
       background-color: var(--main-yellow);
-      padding: 10px 30px;
+      width: 100%;
+      text-align: center;
+      padding-block: 10px;
       font-size: 24px;
       font-weight: bold;
       border-radius: 5px;
       cursor: pointer;
       transition: 0.3s;
 
-      &:hover {
-        filter: brightness(0.7);
+      @media (max-width: 768px) {
+        padding-block: 7px;
+        font-size: 20px;
       }
 
-      @media (max-width: 768px) {
-        padding: 10px 20px;
-        font-size: 20px;
+      &:hover {
+        filter: brightness(0.7);
       }
     }
   }
