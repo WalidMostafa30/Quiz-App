@@ -1,12 +1,12 @@
 /* eslint-disable react/prop-types */
 import "./Bullets.css";
 
-function Bullets({ data, QuestionNumber }) {
+function Bullets({ data, questionNumber }) {
   return (
     <div className="Quiz__bullets">
-      {data.map((e, index) => {
+      {data.map((_, index) => {
         return (
-          <span key={index} className={QuestionNumber >= index ? "active" : ""}>
+          <span key={index} className={questionNumber >= index ? "active" : ""}>
             {index + 1}
           </span>
         );

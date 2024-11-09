@@ -1,0 +1,36 @@
+.Score {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 10px;
+
+  .Score__title {
+    font-size: 30px;
+  }
+
+  .Score__score {
+    font-size: 24px;
+    font-weight: bold;
+
+    span {
+      color: var(--main-yellow);
+    }
+  }
+
+  .Score__btn {
+    background-color: var(--main-yellow);
+    color: white;
+    text-decoration: none;
+    padding: 10px 20px;
+    font-size: 22px;
+    font-weight: bold;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: 0.3s;
+
+    &:hover {
+      filter: brightness(0.7);
+    }
+  }
+}

@@ -1,12 +1,12 @@
-import "./App.css";
-import NavBar from "./components/NavBar/NavBar";
-import Quiz from "./pages/Quiz/Quiz";
+import { Outlet } from "react-router-dom";
 
 function App() {
+
   return (
     <main>
-      <NavBar />
-      <Quiz />
+      <Outlet />
+      <div className="Bg__circle one"/>
+      <div className="Bg__circle two"/>
     </main>
   );
 }

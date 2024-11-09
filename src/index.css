@@ -1,14 +1,47 @@
-*{
+* {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
 :root {
-  --main-color: white;
-  --main-color2: #eee;
-  --main-color3: rgb(17, 80, 103);
-  --main-color3-hover: rgba(17, 80, 103, 0.112);
-  --main-shadow: 0px 0px 10px #00000063;
+  --main-bg: #212f3d;
+  --main-color: #1a212c;
+  --main-color2: #dddddd;
+  --main-yellow: #d6bb00;
+  --main-green: #229953;
+  --main-red: #901313;
+  --main-shadow: -2px 2px 3px 0px #000000b5;
+}
+
+body {
+  font-family: sans-serif;
+  background-color: var(--main-bg);
+  color: white;
+}
+
+.Bg__circle {
+  position: fixed;
+  border: 50px solid var(--main-yellow);
+  border-radius: 50%;
+  width: 500px;
+  height: 500px;
+  opacity: 0.4;
+  z-index: -1;
+
+  @media (max-width: 768px) {
+    width: 300px;
+    height: 300px;
+    border: 30px solid var(--main-yellow);
+  }
+
+  &.one {
+    left: -160px;
+    top: -160px;
+  }
+
+  &.two {
+    right: -160px;
+    bottom: -160px;
+  }
 }

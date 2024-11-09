@@ -1,0 +1,20 @@
+.QuizPage {
+  height: 100dvh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+
+  .QuizPage__container {
+    background-color: var(--main-color);
+    padding: 30px;
+    width: 1100px;
+    border-radius: 20px;
+    box-shadow: var(--main-shadow);
+    
+    @media (max-width: 768px) {
+      padding: 15px;
+      border-radius: 10px;
+    }
+  }
+}

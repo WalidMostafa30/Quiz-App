@@ -1,33 +1,24 @@
 /* eslint-disable react/prop-types */
-import { useEffect, useState } from "react";
+import { useEffect } from "react";
 import "./Timer.css";
 
-const Timer = ({ setshowModal }) => {
-  const [minutes, setMinutes] = useState(1);
-  const [seconds, setSeconds] = useState(0);
-
+const Timer = ({ setDisabled, seconds, setSeconds }) => {
   useEffect(() => {
     const timer = setInterval(() => {
       if (seconds !== 0) {
         setSeconds((prevSeconds) => prevSeconds - 1);
       } else {
-        if (minutes === 0) {
-          clearInterval(timer);
-          setshowModal(true);
-        } else {
-          setMinutes((prevMinutes) => prevMinutes - 1);
-          setSeconds(59);
-        }
+        setDisabled(true);
+        clearInterval(timer);
       }
     }, 1000);
 
     return () => clearInterval(timer);
-    // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [seconds]);
+  }, [seconds, setDisabled, setSeconds]);
 
   return (
     <div className="Quiz__timer">
-      <span className="min">{minutes}</span> :{" "}
+      <span className="min">00</span> :{" "}
       <span className="sec">{seconds < 10 ? "0" + seconds : seconds}</span>
     </div>
   );
